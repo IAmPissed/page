@@ -1,0 +1,21 @@
+{
+  "name": "page",
+  "version": "1.0.0",
+  "description": "password generator",
+  "main": "index.js",
+  "bin": "./app.js",
+  "scripts": {
+    "start": "node app.js",
+    "devStart": "nodemon app.js"
+  },
+  "author": "Xaniar Vakili",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clipboardy": "^3.0.0",
+    "commander": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
