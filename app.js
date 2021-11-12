@@ -2,7 +2,7 @@
 const { program } = require('commander');
 const chalk = require('chalk');
 const clipboard = require('clipboardy');
-const passgen = require('./passgen');
+const passgen = require('./utils/passgen');
 const log = console.log;
 
 // Setting version and description
