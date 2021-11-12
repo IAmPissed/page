@@ -1,11 +1,11 @@
 const charCodes = require('./characters');
 
 // Generating Password
-const passwordGenerator = (length, uppercase = true, nums, specials) => {
+const passwordGenerator = (length, nums, specials, hasUppercase = true) => {
     // Password by default is consist of lowercase chars
     let passwordChars = charCodes.LOWERCASE_CHARACTERS;
     // Adding uppercase chars if true
-    if (uppercase) passwordChars = passwordChars.concat(charCodes.UPPERCASE_CHARACTERS);
+    if (hasUppercase) passwordChars = passwordChars.concat(charCodes.UPPERCASE_CHARACTERS);
 
     // Adding numbers if true
     if (nums) passwordChars = passwordChars.concat(charCodes.NUMBER_CHARACTERS);
