@@ -19,10 +19,10 @@ program
     .option('-s, --save', 'save to passwords.txt', false)
     .parse(process.argv);
 
-const options = program.opts();
+const { length, special, number, save } = program.opts();
 
 // Generating the password using flags 
-let password = passgen(options.length, options.number, options.special);
+let password = passgen(length, number, special);
 
 // Saving to clipboard
 clipboard.writeSync(password)
@@ -33,6 +33,6 @@ log(chalk.cyanBright('Generated Password --> ') + chalk.rgb(255, 79, 167)(passwo
 log(chalk.rgb(255, 153, 145)('Password copied to clipboard!'));
 
 // Saving password to passwords.txt
-if (options.save) {
+if (save) {
     savePassword(password)
 }
