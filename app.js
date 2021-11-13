@@ -4,6 +4,7 @@ const chalk = require('chalk');
 const clipboard = require('clipboardy');
 const passgen = require('./utils/passgen');
 const log = console.log;
+const savePassword = require('./utils/save');
 
 // Setting version and description
 program
@@ -30,3 +31,8 @@ clipboard.writeSync(password)
 log(chalk.cyanBright('Generated Password --> ') + chalk.rgb(255, 79, 167)(password));
 // confirmation message
 log(chalk.rgb(255, 153, 145)('Password copied to clipboard!'));
+
+// Saving password to passwords.txt
+if (options.save) {
+    savePassword(password)
+}
